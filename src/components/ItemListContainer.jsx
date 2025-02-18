@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import './ItemListContainer.css';  // Asegúrate de importar el archivo CSS
 
 const mockProducts = [
   { id: 1, name: "Deck Yu-Gi-Oh!", category: "cartas", price: 15000 },
@@ -21,11 +22,11 @@ function ItemListContainer() {
   }, [categoryId]);
 
   return (
-    <div>
+    <div className="products-container">
       <h2>{categoryId ? `Categoría: ${categoryId}` : "Todos los productos"}</h2>
-      <div style={styles.grid}>
+      <div className="products-grid">
         {products.map((product) => (
-          <div key={product.id} style={styles.card}>
+          <div key={product.id} className="product-card">
             <h3>{product.name}</h3>
             <p>Precio: ${product.price}</p>
             <Link to={`/product/${product.id}`}>Ver detalles</Link>
@@ -35,10 +36,5 @@ function ItemListContainer() {
     </div>
   );
 }
-
-const styles = {
-  grid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "15px" },
-  card: { border: "1px solid #ccc", padding: "10px", textAlign: "center" }
-};
 
 export default ItemListContainer;

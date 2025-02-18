@@ -1,0 +1,27 @@
+/* Asegúrate de que estos estilos estén en un archivo CSS, como 'ItemListContainer.css' */
+.products-container {
+    padding: 20px;
+    margin-top: 80px; /* Ajusta el margen superior según la altura de tu navbar */
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cuadricula responsiva */
+    gap: 20px; /* Espaciado entre los productos */
+    padding: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  

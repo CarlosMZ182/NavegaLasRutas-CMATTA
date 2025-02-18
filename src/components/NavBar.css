@@ -1,136 +1,54 @@
-/* 📌 General */
-body {
-  font-family: Arial, sans-serif;
-  background-image: url("/assets/fondo.jpg"); /* Ajusta según el nombre del archivo */
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-}
-
 /* 📌 Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #fff; /* Navbar blanco */
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
-.navbar-logo {
+.logoContainer {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.navbar-logo img {
+.logo {
   height: 40px;
 }
 
-.navbar-links {
+.store-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000; /* Nombre de tienda en negro */
+}
+
+.menu {
   display: flex;
+  list-style: none;
   gap: 15px;
 }
 
-.navbar-links a {
-  color: #fff;
+.category-link {
+  color: #ff0000; /* Títulos de las categorías en rojo */
   text-decoration: none;
   font-size: 16px;
 }
 
-.navbar-links a:hover {
-  color: #ffd700;
+.category-link:hover {
+  color: #ffd700; /* Color dorado al pasar el ratón */
 }
 
-/* 📌 Contenedor de productos */
-.products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 100px 20px 20px; /* Ajuste para no chocar con el navbar */
-}
-
-/* 📌 Tarjeta de producto */
-.product-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
-}
-
-.product-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.product-card h3 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.product-card button {
-  background-color: #ffd700;
-  border: none;
-  padding: 8px 12px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.product-card button:hover {
-  background-color: #ffcc00;
-}
-
-/* 📌 Vista Detalle de Producto */
-.product-detail {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 50px;
-}
-
-.product-detail img {
-  width: 300px;
-  border-radius: 10px;
-}
-
-.product-detail .info {
-  max-width: 500px;
-}
-
-.product-detail button {
-  background-color: #ffd700;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.product-detail button:hover {
-  background-color: #ffcc00;
+.cart {
+  font-size: 20px;
 }
 
 /* 📌 Estilos para el carrito */
 .cart-icon {
   cursor: pointer;
-  font-size: 24px;
-  color: #fff;
-}
-
-.cart-icon:hover {
-  color: #ffd700;
-}
+ 
